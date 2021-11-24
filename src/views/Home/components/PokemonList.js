@@ -1,11 +1,9 @@
+import PokemonListItem from "./PokemonListItem";
+
 export default function PokemonList({ pokemons }) {
     return (
         <div>
-            {pokemons?.map(({name}, index) => (
-                <div key={index}>
-                {<p>{name}</p>}
-                </div>
-            ))}
+            {pokemons?.map(( pokemon, index ) => <PokemonListItem key={index} {...pokemon} />)}
         </div>
     );
 }
